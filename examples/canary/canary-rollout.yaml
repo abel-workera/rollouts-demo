@@ -24,7 +24,7 @@ spec:
         resources:
           requests:
             memory: 32Mi
-            cpu: 6m
+            cpu: 5m
       - name: canary-demo1
         image: busybox:stable
         command: ["sh", "-c", "while true; do echo 'Hello, World!'; sleep 300; done"]
