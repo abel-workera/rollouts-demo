@@ -27,6 +27,7 @@ spec:
             cpu: 6m
       - name: canary-demo1
         image: busybox:stable
+        command: ["sh", "-c", "while true; do echo 'Hello, World!'; sleep 300; done"]
         imagePullPolicy: Always
         ports:
         - name: http
@@ -38,6 +39,7 @@ spec:
             cpu: 6m
       - name: canary-demo3
         image: busybox:unstable-glibc
+        command: ["sh", "-c", "while true; do echo 'Hello, World!'; sleep 300; done"]
         imagePullPolicy: Always
         ports:
         - name: http
