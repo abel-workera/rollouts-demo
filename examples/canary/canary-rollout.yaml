@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: canary-demo
-        image: argoproj/rollouts-demo:blue
+        image: argoproj/rollouts-demo:purple
         imagePullPolicy: Always
         ports:
         - name: http
@@ -37,7 +37,7 @@ spec:
             memory: 32Mi
             cpu: 6m
       - name: canary-demo3
-        image: argoproj/rollouts-demo:blue
+        image: argoproj/rollouts-demo:green
         imagePullPolicy: Always
         ports:
         - name: http
