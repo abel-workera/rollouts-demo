@@ -25,6 +25,28 @@ spec:
           requests:
             memory: 32Mi
             cpu: 6m
+      - name: canary-demo1
+        image: argoproj/rollouts-demo:blue
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 6m
+      - name: canary-demo3
+        image: argoproj/rollouts-demo:blue
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+        resources:
+          requests:
+            memory: 32Mi
+            cpu: 6m
   strategy:
     canary:
       canaryService: canary-demo-preview
