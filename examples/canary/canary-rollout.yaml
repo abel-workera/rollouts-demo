@@ -26,7 +26,7 @@ spec:
             memory: 32Mi
             cpu: 6m
       - name: canary-demo1
-        image: argoproj/rollouts-demo:blue
+        image: busybox:stable
         imagePullPolicy: Always
         ports:
         - name: http
@@ -37,7 +37,7 @@ spec:
             memory: 32Mi
             cpu: 6m
       - name: canary-demo3
-        image: argoproj/rollouts-demo:green
+        image: busybox:unstable-glibc
         imagePullPolicy: Always
         ports:
         - name: http
