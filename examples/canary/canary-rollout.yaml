@@ -24,7 +24,7 @@ spec:
         resources:
           requests:
             memory: 32Mi
-            cpu: 5m
+            cpu: 6m
   strategy:
     canary:
       canaryService: canary-demo-preview
